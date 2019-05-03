@@ -26,7 +26,6 @@ public class ProductServiceImplTest {
 
     @Test
     public void findOne() {
-
         ProductInfo productInfo = productService.findOne("123456");
         Assert.assertEquals("123456",productInfo.getProductId());
     }
