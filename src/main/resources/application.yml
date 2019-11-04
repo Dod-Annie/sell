@@ -2,9 +2,12 @@ spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
-    password: casbin
-    url: jdbc:mysql://127.0.0.1:3308/sell?characterEncoding=utf-8&useSSL=false
+    password: alien54395
+    url: jdbc:mysql://cdb-mc6jb87a.bj.tencentcdb.com:10226/sell?characterEncoding=utf-8&useSSL=false
   jpa:
     show-sql: true
+    hibernate:
+        ddl-auto: update
+
 server:
   context-path: /sell

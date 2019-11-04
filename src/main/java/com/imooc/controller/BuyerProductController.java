@@ -38,6 +38,7 @@ public class BuyerProductController {
     public ResultVO list(){
         //1.查询所有上架商品
         List<ProductInfo> productInfoList = productService.findUpAll();
+        System.out.println(productInfoList.size());
         //2.查询类目（一次性查询）
         List<Integer> categoryTypeList =
         productInfoList.stream()

@@ -1,26 +1,12 @@
 package com.imooc.enums;
 
-import lombok.Getter;
-
-/**
- * Created by Dod_Annie on 2019/5/2
- */
-
-@Getter
-public enum  ProductStatusEnum {
-
-    UP(0,"在架"),
-    DOWN(1,"下架"),
-    ;
+public enum PayStatusEnum {
+    WAIT( 0, "等待支付"),
+    SUCCESS( 1 ,"支付成功");
 
     private  Integer code;
 
     private  String message;
-
-    ProductStatusEnum(Integer code,String message){
-        this.code  = code;
-        this.message = message;
-    }
 
     public Integer getCode() {
         return code;
@@ -28,6 +14,11 @@ public enum  ProductStatusEnum {
 
     public void setCode(Integer code) {
         this.code = code;
+    }
+
+    PayStatusEnum(Integer code, String message) {
+        this.code = code;
+        this.message = message;
     }
 
     public String getMessage() {
