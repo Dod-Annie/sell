@@ -7,6 +7,7 @@ import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.math.BigDecimal;
 
 @Entity
 @DynamicUpdate
@@ -18,7 +19,7 @@ public class OrderMaster {
   private String buyerPhone;
   private String buyerAddress;
   private String buyerOpenid;
-  private double orderAmount;
+  private BigDecimal orderAmount;
   private long orderStatus = OrderStatusEnum.NEW.getCode();
   private long payStatus = PayStatusEnum.WAIT.getCode();
   private java.sql.Timestamp createTime;
@@ -70,11 +71,11 @@ public class OrderMaster {
   }
 
 
-  public double getOrderAmount() {
+  public BigDecimal getOrderAmount() {
     return orderAmount;
   }
 
-  public void setOrderAmount(double orderAmount) {
+  public void setOrderAmount(BigDecimal orderAmount) {
     this.orderAmount = orderAmount;
   }
 

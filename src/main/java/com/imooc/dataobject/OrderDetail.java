@@ -16,7 +16,7 @@ public class OrderDetail {
   private String productId;
   private String productName;
   private double productPrice;
-  private long productQuantity;
+  private Integer  productQuantity;
   private String productIcon;
   private java.sql.Timestamp createTime;
   private java.sql.Timestamp updateTime;
@@ -67,11 +67,11 @@ public class OrderDetail {
   }
 
 
-  public long getProductQuantity() {
+  public Integer  getProductQuantity() {
     return productQuantity;
   }
 
-  public void setProductQuantity(long productQuantity) {
+  public void setProductQuantity(Integer  productQuantity) {
     this.productQuantity = productQuantity;
   }
 
